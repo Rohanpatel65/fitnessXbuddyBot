@@ -19,11 +19,8 @@ def webhook():
     # Get intent name
     intent_name = req.get("queryResult", {}).get("intent", {}).get("displayName")
 
-    if intent_name == "stretching exercises":
-        message = "💪 Try these stretches: Arm Circles, Leg Swings, and Child’s Pose."
-    else:
-        message = "Sorry, I don't have information on that."
-
+    message = "💪 Try these stretches: Arm Circles, Leg Swings, and Child’s Pose."
+    
     return jsonify({"fulfillmentText": message})
 
 # ✅ Run Flask app
